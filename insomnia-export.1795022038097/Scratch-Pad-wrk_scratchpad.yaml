@@ -1,0 +1,458 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: Scratch Pad
+meta:
+  id: wrk_scratchpad
+  created: 1794407221384
+  modified: 1794407221384
+  description: ""
+collection:
+  - name: API Array Produtos
+    meta:
+      id: fld_afee9c1fa65b4ce0aaad1db15f683ac6
+      created: 1794486446825
+      modified: 1795019225629
+      sortKey: -1794486446825
+      description: ""
+    children:
+      - url: http://localhost:3000/produtos
+        name: Listar produtos
+        meta:
+          id: req_4f1d4547c4984460bfbf3e63a7060041
+          created: 1794486516972
+          modified: 1794489595681
+          isPrivate: false
+          description: ""
+          sortKey: -1794486516972
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.1.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:3000/produtos/2
+        name: Listar produtos por ID
+        meta:
+          id: req_fe05e856ebb247c4aa1a172591ec5a7b
+          created: 1794486737996
+          modified: 1794486866648
+          isPrivate: false
+          description: ""
+          sortKey: -1794486737996
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.1.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/produtos
+        name: Iniciar novo produto
+        meta:
+          id: req_1b526eb684844221a31ad52d284b6770
+          created: 1794487155452
+          modified: 1794487511637
+          isPrivate: false
+          description: ""
+          sortKey: -1794487155452
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            	{
+            		"nome": "Cabo USB",
+            		"preco": 35,
+            		"estoque": 20,
+            		"categoria": "Acessorio"
+            	}
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.1.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/produtos/categoria/acessorio
+        name: Listar por categoria
+        meta:
+          id: req_ca70fd053283414fa3015e51851c9d4a
+          created: 1794489095368
+          modified: 1794489333062
+          isPrivate: false
+          description: ""
+          sortKey: -1794489095368
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.1.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:3000/produtos/1
+        name: Altera um produto
+        meta:
+          id: req_3f6d8428fdd14b54916927e3fd225e45
+          created: 1794491817713
+          modified: 1794494293671
+          isPrivate: false
+          description: ""
+          sortKey: -1794491817713
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            		"id": 1,
+            		"nome": "Notbook Acer 1.7 Max",
+            		"preco": 350,
+            		"estoque": 10,
+            		"categoria": "Informática"
+            	}
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.1.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:3000/produtos/1
+        name: Deleta um produto
+        meta:
+          id: req_b06a67c949d5471ebd3fa0cef8a64dea
+          created: 1794494305292
+          modified: 1794494341928
+          isPrivate: false
+          description: ""
+          sortKey: -1794494305292
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.1.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Desafio
+    meta:
+      id: fld_f1537aaa50d9441b8fe8d66c032cc47c
+      created: 1794501645413
+      modified: 1794501720498
+      sortKey: -1794501645413
+      description: ""
+    children:
+      - url: localhost:3000/funcionarios
+        name: Listar todos os funcionarios
+        meta:
+          id: req_7ad90e1b0a0e413b81f24c0f484ac1ba
+          created: 1794501653766
+          modified: 1795020647050
+          isPrivate: false
+          description: |
+            ## Objetivo
+
+            Listar todos os funcionários que foram cadastrados
+
+            ## Dados Enviados
+            - Não precisa enviar dados
+
+            ## Respostas Esperadas
+            - 200: Retorna a lista de todos os funcionários cadastrados
+            - 404: Nenhum funcionário foi cadastrado no sistema
+          sortKey: -1794501713666
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.1.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/funcionarios/123.456.789-00
+        name: listar por CPF
+        meta:
+          id: req_a26a53de5a1b4fa282b51d19b85c478f
+          created: 1794501752199
+          modified: 1795021264708
+          isPrivate: false
+          description: |
+            ## Objetivo
+
+            Buscar um funcionário pelo CPF informado.
+
+            ## Dados Enviados
+            - número do CPF do funcionário
+
+            ## Respostas Esperadas
+            - 200:  Funcionário encontrado com sucesso
+            - 404: Funcionário não encontrado
+          sortKey: -1794501752199
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.1.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/funcionarios/depto/D2
+        name: Listar por depto
+        meta:
+          id: req_c0ddb4fe60494cfca6a1067ecaddfd3c
+          created: 1794501844492
+          modified: 1795021365450
+          isPrivate: false
+          description: |-
+            ## Objetivo
+
+            Listar os funcionários de um departamento específico
+
+            ## Dados Enviados
+            - código do departamento
+
+            ## Respostas Esperadas
+            - 200:  Funcionários do departamento encontrados
+            - 404:  Departamento ou funcionários não encontrados
+          sortKey: -1794501752299
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.1.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/funcionarios/maior-salario
+        name: Listar o maior salario
+        meta:
+          id: req_31b82dad08c147c59dbdd5e8199a47ac
+          created: 1794502012237
+          modified: 1795021495944
+          isPrivate: false
+          description: |
+            ## Objetivo
+
+            Listar o funcionário que possui o maior salário
+
+            ## Dados Enviados
+            - Não precisa enviar dados
+
+            ## Respostas Esperadas
+            - 200: Funcionário com maior salário encontrado
+            - 404:  Nenhum funcionário encontrado
+          sortKey: -1794502012237
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.1.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/funcionarios
+        name: Incluir funcionario novo
+        meta:
+          id: req_50ebe2b9c19f439c953f867bdb87ea5c
+          created: 1794502046413
+          modified: 1795021715992
+          isPrivate: false
+          description: |
+            ## Objetivo
+
+            Cadastrar um novo funcionário no sistema
+
+            ## Dados Enviados
+            - nome do funcionário
+            - CPF do funcionário
+            - departamento do funcionário
+            - salário do funcionário
+
+            ## Respostas Esperadas
+            - 200: Funcionário com maior salário encontrado
+            - 404: Dados inválidos ou incompletos
+          sortKey: -1794502046413
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            		"funcionario": "Eduardo Henrique3",
+            		"cpf": "604.578.994.78",
+            		"depto": "D3",
+            		"salario": 8.99
+            	}
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.1.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/funcionarios/604.578.994.78
+        name: Alterar departamento
+        meta:
+          id: req_7bbac25aa4ed4d64b870c975275b7e0b
+          created: 1794504829000
+          modified: 1795021884860
+          isPrivate: false
+          description: |
+            ## Objetivo
+
+            Alterar o departamento de um funcionário cadastrado
+
+            ## Dados Enviados
+            - CPF do funcionário
+            - novo departamento do funcionário
+
+
+            ## Respostas Esperadas
+            - 200: Departamento alterado com sucesso
+            - 404: Funcionário não encontrado
+          sortKey: -1794502046513
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            		"funcionario": "Maria Souza33",
+            		"CPF": "987.654.321-00",
+            		"depto": "D5",
+            		"salario": 4.25
+            	}
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.1.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/funcionarios/987.654.321-00
+        name: deletar funcionario
+        meta:
+          id: req_c3a48b77416949bfa4f59613fe9d2f54
+          created: 1794505073990
+          modified: 1795021958127
+          isPrivate: false
+          description: |
+            ## Objetivo
+
+            Excluir um funcionário cadastrado no sistema
+
+            ## Dados Enviados
+            - CPF do funcionário que será excluído
+
+
+            ## Respostas Esperadas
+            - 200: Funcionário excluído com sucesso
+            - 404:  Funcionário não encontrado
+          sortKey: -1794502046613
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.1.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1794418757392
+    modified: 1794418757392
+environments:
+  name: Base Environment
+  meta:
+    id: env_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1794418757387
+    modified: 1794418757387
+    isPrivate: false
